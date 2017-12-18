@@ -59,6 +59,12 @@ public class Medicamento_Control {
        return result;
     }     
     
+    public int buscarxNombre(String nom){
+        int result = medicamentoDAO.buscarxNombre(nom);
+        
+        return result;
+    }
+    
     public int modificarMedicamento(int cod, String nom, String descrip, int costo){
         Medicamento medic = new Medicamento();
         medic.setNomMedicamento(nom);

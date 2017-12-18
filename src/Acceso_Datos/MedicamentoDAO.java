@@ -42,7 +42,7 @@ public class MedicamentoDAO {
         return 0;  
     }
     
-    public int conbuscarxNombre(String nombre){
+    public int buscarxNombre(String nombre){
         int cod = 0;
         String sql_select;
         sql_select="SELECT cod_medicam, descrip_medicam, costo_medicam FROM medicamento WHERE nom_medicam ILIKE '"+nombre+"'";

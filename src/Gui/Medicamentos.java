@@ -483,8 +483,9 @@ public class Medicamentos extends javax.swing.JFrame {
     private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
         // TODO add your handling code here:
         
+        int rest; 
         if (!jTextFieldNombre.getText().isEmpty())
-            medicamento = medicamento_control.consultarxNombre(jTextFieldNombre.getText());
+            res = medicamento_control.buscarxNombre(jTextFieldNombre.getText());
             
     }//GEN-LAST:event_jButtonSearchActionPerformed
 
