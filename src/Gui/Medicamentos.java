@@ -22,6 +22,7 @@ import java.io.FileOutputStream;
 import javax.swing.JFileChooser;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
+import java.util.Vector;
 import javax.swing.JOptionPane;
 
 
@@ -84,7 +85,7 @@ public class Medicamentos extends javax.swing.JFrame {
         jButtonSearch = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableQuery = new javax.swing.JTable();
         jButtonRecetar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jPanelRecetar = new javax.swing.JPanel();
@@ -165,20 +166,20 @@ public class Medicamentos extends javax.swing.JFrame {
 
         jScrollPane3.setBackground(new java.awt.Color(116, 165, 170));
 
-        jTable1.setBackground(new java.awt.Color(116, 165, 170));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableQuery.setBackground(new java.awt.Color(150, 165, 170));
+        jTableQuery.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Medicamento", "Descripción", "Costo"
+                "Serial", "Medicamento", "Descripción", "Costo"
             }
         ));
-        jScrollPane4.setViewportView(jTable1);
+        jScrollPane4.setViewportView(jTableQuery);
 
         jScrollPane3.setViewportView(jScrollPane4);
 
-        jPanelRegistrar.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 400, 90));
+        jPanelRegistrar.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 520, 90));
 
         general_panel.add(jPanelRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 730, 500));
 
@@ -482,10 +483,24 @@ public class Medicamentos extends javax.swing.JFrame {
 
     private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jTableQuery.getModel();
         
-        int rest; 
+        model.addRow(new Object[]{1, 2,3});
+        
         if (!jTextFieldNombre.getText().isEmpty())
-            res = medicamento_control.buscarxNombre(jTextFieldNombre.getText());
+        {
+            Vector <Medicamento> meds = new Vector <Medicamento> (); 
+            meds = medicamento_control.buscarxNombre(jTextFieldNombre.getText());
+            System.out.println("size: "+ meds.size());
+            System.out.println(meds.get(9).getNomMedicamento());
+            for (int i= 0; i < meds.size() ; i++)
+            {
+                model.addRow(new Object[]{meds.get(i).getCodigoMedicamento(), meds.get(i).getNomMedicamento() , meds.get(i).getDescrip_medicamento(), meds.get(i).getCosto_medicamento()});
+                
+                
+            }
+        }
+            
             
     }//GEN-LAST:event_jButtonSearchActionPerformed
 
@@ -519,8 +534,8 @@ public class Medicamentos extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTableFormula;
+    private javax.swing.JTable jTableQuery;
     private javax.swing.JTextArea jTextAreaObs;
     private javax.swing.JTextField jTextFieldCosto;
     private javax.swing.JTextField jTextFieldDescr;

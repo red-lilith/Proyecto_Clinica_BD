@@ -59,10 +59,10 @@ public class Medicamento_Control {
        return result;
     }     
     
-    public int buscarxNombre(String nom){
-        int result = medicamentoDAO.buscarxNombre(nom);
+    public Vector <Medicamento> buscarxNombre(String nom){
+         Vector <Medicamento> meds = new Vector <Medicamento>();
         
-        return result;
+        return meds= medicamentoDAO.buscarxNombre(nom);
     }
     
     public int modificarMedicamento(int cod, String nom, String descrip, int costo){

@@ -42,24 +42,30 @@ public class MedicamentoDAO {
         return 0;  
     }
     
-    public int buscarxNombre(String nombre){
-        int cod = 0;
+    public Vector<Medicamento> buscarxNombre(String nombre){
+        Vector <Medicamento> meds = new Vector <Medicamento>();
         String sql_select;
-        sql_select="SELECT cod_medicam, descrip_medicam, costo_medicam FROM medicamento WHERE nom_medicam ILIKE '"+nombre+"'";
+        sql_select="SELECT cod_medicam,nom_medicam, descrip_medicam, costo_medicam FROM medicamento WHERE nom_medicam ILIKE '%"+nombre+"%'";
          try{
             Connection conn = fachadaBD.getConnetion();
             Statement sentencia = conn.createStatement();
             ResultSet tabla = sentencia.executeQuery(sql_select);
             
             while(tabla.next()){
-                cod = tabla.getInt(1);
-            
+                System.out.println("next");
+                Medicamento med = new Medicamento(); 
+                med.setCodigoMedicamento(tabla.getInt(1));
+                med.setNomMedicamento( tabla.getString(2) );
+                med.setDescripMedicamento(tabla.getString(3));
+                med.setCostoMedicamento(tabla.getInt(4));
+                meds.addElement(med);
             }         
-            return cod;
+            System.out.println("size: "+ meds.size());
+            return meds;
          }
          catch(SQLException e){ System.out.println(e); }
          catch(Exception e){ System.out.println(e); }
-        return cod;
+        return meds;
     }
     
     public int consultarxNombre(String nombre){
