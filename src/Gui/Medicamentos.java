@@ -6,6 +6,7 @@
 package Gui;
 
 import Controlador.*;
+import Logica.Medicamento;
 import Logica.Paciente;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -37,6 +38,7 @@ public class Medicamentos extends javax.swing.JFrame {
     Formulacion_Control formulacion_control; 
     Formula_Control formula_control; 
     Vista_Control vista_control; 
+    Medicamento medicamento; 
     /**
      * Creates new form Medicamentos
      */
@@ -49,6 +51,8 @@ public class Medicamentos extends javax.swing.JFrame {
         medicamento_control = new Medicamento_Control(); 
         formulacion_control = new Formulacion_Control(); 
         formula_control = new Formula_Control();
+        
+        medicamento =new Medicamento(); 
         
         jPanelRegistrar.setVisible(false);
         jPanelRecetar.setVisible(true); 
@@ -77,7 +81,10 @@ public class Medicamentos extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonSearch = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jButtonRecetar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jPanelRecetar = new javax.swing.JPanel();
@@ -123,6 +130,12 @@ public class Medicamentos extends javax.swing.JFrame {
         jPanelRegistrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanelRegistrar.add(jTextFieldDescr, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 150, -1));
         jPanelRegistrar.add(jTextFieldCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 150, -1));
+
+        jTextFieldNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreActionPerformed(evt);
+            }
+        });
         jPanelRegistrar.add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 150, -1));
 
         jLabel5.setText("Descripción");
@@ -140,10 +153,32 @@ public class Medicamentos extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanelRegistrar.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, -1));
+        jPanelRegistrar.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/search_.png"))); // NOI18N
-        jPanelRegistrar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 30, 30));
+        jButtonSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/search_.png"))); // NOI18N
+        jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSearchActionPerformed(evt);
+            }
+        });
+        jPanelRegistrar.add(jButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 30, 30));
+
+        jScrollPane3.setBackground(new java.awt.Color(116, 165, 170));
+
+        jTable1.setBackground(new java.awt.Color(116, 165, 170));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Medicamento", "Descripción", "Costo"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable1);
+
+        jScrollPane3.setViewportView(jScrollPane4);
+
+        jPanelRegistrar.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 400, 90));
 
         general_panel.add(jPanelRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 730, 500));
 
@@ -441,6 +476,18 @@ public class Medicamentos extends javax.swing.JFrame {
         vista_control.mostrarVentana("general");
     }//GEN-LAST:event_back_button1MousePressed
 
+    private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNombreActionPerformed
+
+    private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
+        // TODO add your handling code here:
+        
+        if (!jTextFieldNombre.getText().isEmpty())
+            medicamento = medicamento_control.consultarxNombre(jTextFieldNombre.getText());
+            
+    }//GEN-LAST:event_jButtonSearchActionPerformed
+
     
    
 
@@ -450,11 +497,11 @@ public class Medicamentos extends javax.swing.JFrame {
     private javax.swing.JPanel general_panel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonAgregar;
     private javax.swing.JButton jButtonGuardar;
     private javax.swing.JButton jButtonRecetar;
     private javax.swing.JButton jButtonRuta;
+    private javax.swing.JButton jButtonSearch;
     private javax.swing.JComboBox<String> jComboBoxMed;
     private javax.swing.JComboBox<String> jComboBoxMedida;
     private javax.swing.JComboBox<String> jComboBoxUnidad;
@@ -469,6 +516,9 @@ public class Medicamentos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelRegistrar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTableFormula;
     private javax.swing.JTextArea jTextAreaObs;
     private javax.swing.JTextField jTextFieldCosto;

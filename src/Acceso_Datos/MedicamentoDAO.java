@@ -42,6 +42,26 @@ public class MedicamentoDAO {
         return 0;  
     }
     
+    public int conbuscarxNombre(String nombre){
+        int cod = 0;
+        String sql_select;
+        sql_select="SELECT cod_medicam, descrip_medicam, costo_medicam FROM medicamento WHERE nom_medicam ILIKE '"+nombre+"'";
+         try{
+            Connection conn = fachadaBD.getConnetion();
+            Statement sentencia = conn.createStatement();
+            ResultSet tabla = sentencia.executeQuery(sql_select);
+            
+            while(tabla.next()){
+                cod = tabla.getInt(1);
+            
+            }         
+            return cod;
+         }
+         catch(SQLException e){ System.out.println(e); }
+         catch(Exception e){ System.out.println(e); }
+        return cod;
+    }
+    
     public int consultarxNombre(String nombre){
         int cod = 0;
         String sql_select;
