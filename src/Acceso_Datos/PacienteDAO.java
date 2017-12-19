@@ -125,18 +125,17 @@ public class PacienteDAO {
         return result;
     }
     
-    public int promedioMedicamentos(int y,int m1,int m2){
+    public int promedioMedicamentos(int y,int m1,int d1,int m2,int d2){
         int result = 0;
         try{
             Connection conn = fachadaBD.getConnetion();
             Statement sentencia = conn.createStatement();
             ResultSet promedio = sentencia.executeQuery(
-                    "select round(avg(costo_medicam))\n" +
-                    "from registro_consulta join formulacion_medicamento \n" +
-                    "on registro_consulta.cod_formula=formulacion_medicamento.cod_formula\n" +
-                    "join medicamento on medicamento.cod_medicam=formulacion_medicamento.cod_medicam\n" +
-                    "where fecha_consulta between '"+y+"/"+m1+"/01' and '"+y+"/"+m2+"/28'"
-            );
+                "select round(avg(costo_medicam))\n" +
+                "from registro_consulta join formulacion_medicamento \n" +
+                "on registro_consulta.cod_formula=formulacion_medicamento.cod_formula\n" +
+                "join medicamento on medicamento.cod_medicam=formulacion_medicamento.cod_medicam\n" +
+                "where fecha_consulta between '"+y+"/"+m1+"/"+d1+"' and '"+y+"/"+m2+"/"+d2+"'");
             
             promedio.next();
             result = promedio.getInt(1);

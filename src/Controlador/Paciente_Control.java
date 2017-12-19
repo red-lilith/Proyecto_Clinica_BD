@@ -7,6 +7,7 @@ package Controlador;
 
 import Acceso_Datos.PacienteDAO;
 import Logica.Paciente;
+import java.util.Calendar;
 
 /**
  *
@@ -67,12 +68,20 @@ public class Paciente_Control {
         return result;
     }
     
-    public int promedioMedicamentos(int year,int month){
+    public int UltimoDia (int anio, int mes) {
+        Calendar cal=Calendar.getInstance();
+        cal.set(anio, mes-1, 1);
+        int salida = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+        return salida;
+    }
+    
+    
+    public int promedioMedicamentos(int year,int month){        
         int result=0;
         if(month==0){
-            result = pacienteDAO.promedioMedicamentos(year,01,12);
+            result = pacienteDAO.promedioMedicamentos(year,1,1,12,UltimoDia(year,12));
         }else{
-            result = pacienteDAO.promedioMedicamentos(year,month,month);
+            result = pacienteDAO.promedioMedicamentos(year,month+1,1,month+1,UltimoDia(year,month+1));
         }
         return result;
     }
