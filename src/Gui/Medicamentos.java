@@ -55,11 +55,8 @@ public class Medicamentos extends javax.swing.JFrame {
         
         medicamento =new Medicamento(); 
         
-        jPanelRegistrar.setVisible(false);
-        jPanelRecetar.setVisible(true); 
-        
         setLocationRelativeTo(null);
-	setSize(1244, 644);
+	setSize(630, 600);
 	setResizable(false);	
     }
 
@@ -83,29 +80,9 @@ public class Medicamentos extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButtonSearch = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTableQuery = new javax.swing.JTable();
-        jButtonRecetar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jPanelRecetar = new javax.swing.JPanel();
-        jLabelId = new javax.swing.JLabel();
-        jTextFieldId = new javax.swing.JTextField();
-        jLabelMed = new javax.swing.JLabel();
-        jComboBoxMed = new javax.swing.JComboBox<>();
-        jButtonAgregar = new javax.swing.JButton();
-        scrollPane1 = new java.awt.ScrollPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTableFormula = new javax.swing.JTable();
-        jLabelDosis = new javax.swing.JLabel();
-        jComboBoxUnidad = new javax.swing.JComboBox<>();
-        jComboBoxMedida = new javax.swing.JComboBox<>();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextAreaObs = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        jButtonRuta = new javax.swing.JButton();
-        jTextFieldRuta = new javax.swing.JTextField();
-        jButtonGuardar = new javax.swing.JButton();
         back_button1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -129,24 +106,24 @@ public class Medicamentos extends javax.swing.JFrame {
 
         jPanelRegistrar.setBackground(new java.awt.Color(116, 165, 170));
         jPanelRegistrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanelRegistrar.add(jTextFieldDescr, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 150, -1));
-        jPanelRegistrar.add(jTextFieldCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 150, -1));
+        jPanelRegistrar.add(jTextFieldDescr, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 150, -1));
+        jPanelRegistrar.add(jTextFieldCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 150, -1));
 
         jTextFieldNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldNombreActionPerformed(evt);
             }
         });
-        jPanelRegistrar.add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 150, -1));
+        jPanelRegistrar.add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 150, -1));
 
         jLabel5.setText("Descripción");
-        jPanelRegistrar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 100, 30));
+        jPanelRegistrar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 100, 30));
 
         jLabel6.setText("Costo");
-        jPanelRegistrar.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 70, 30));
+        jPanelRegistrar.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 70, 30));
 
         jLabel7.setText("Nombre Med");
-        jPanelRegistrar.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 100, 30));
+        jPanelRegistrar.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 100, 30));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/savecita_.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +131,7 @@ public class Medicamentos extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanelRegistrar.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
+        jPanelRegistrar.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 410, -1, -1));
 
         jButtonSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/search_.png"))); // NOI18N
         jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -162,9 +139,7 @@ public class Medicamentos extends javax.swing.JFrame {
                 jButtonSearchActionPerformed(evt);
             }
         });
-        jPanelRegistrar.add(jButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 30, 30));
-
-        jScrollPane3.setBackground(new java.awt.Color(116, 165, 170));
+        jPanelRegistrar.add(jButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 40, 40));
 
         jTableQuery.setBackground(new java.awt.Color(150, 165, 170));
         jTableQuery.setModel(new javax.swing.table.DefaultTableModel(
@@ -177,19 +152,7 @@ public class Medicamentos extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(jTableQuery);
 
-        jScrollPane3.setViewportView(jScrollPane4);
-
-        jPanelRegistrar.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 520, 90));
-
-        general_panel.add(jPanelRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 730, 500));
-
-        jButtonRecetar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/receta_.png"))); // NOI18N
-        jButtonRecetar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRecetarActionPerformed(evt);
-            }
-        });
-        general_panel.add(jButtonRecetar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 110, 90));
+        jPanelRegistrar.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 505, 300));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/med__.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -197,109 +160,7 @@ public class Medicamentos extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        general_panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 110, 110));
-
-        jPanelRecetar.setBackground(new java.awt.Color(116, 165, 170));
-        jPanelRecetar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabelId.setText("Identificación Paciente");
-        jPanelRecetar.add(jLabelId, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 170, 30));
-
-        jTextFieldId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldIdActionPerformed(evt);
-            }
-        });
-        jPanelRecetar.add(jTextFieldId, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 230, -1));
-
-        jLabelMed.setText("Medicamento");
-        jPanelRecetar.add(jLabelMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 110, 30));
-
-        jComboBoxMed.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Medicamento 00", "Medicamento 01", "Medicamento 02", "Medicamento 03", "Medicamento 04", "Medicamento 05", "Medicamento 06", "Medicamento 07", "Medicamento 08", "Medicamento 09" }));
-        jComboBoxMed.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxMedActionPerformed(evt);
-            }
-        });
-        jPanelRecetar.add(jComboBoxMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 230, -1));
-
-        jButtonAgregar.setBackground(java.awt.Color.lightGray);
-        jButtonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/confirm_ .png"))); // NOI18N
-        jButtonAgregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAgregarActionPerformed(evt);
-            }
-        });
-        jPanelRecetar.add(jButtonAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 30, 30));
-
-        jTableFormula.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Medicamento", "Dosis", "Observaciones"
-            }
-        ));
-        jScrollPane1.setViewportView(jTableFormula);
-
-        scrollPane1.add(jScrollPane1);
-
-        jPanelRecetar.add(scrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 460, 120));
-
-        jLabelDosis.setText("Dosis");
-        jPanelRecetar.add(jLabelDosis, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 60, 30));
-
-        jComboBoxUnidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
-        jComboBoxUnidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxUnidadActionPerformed(evt);
-            }
-        });
-        jPanelRecetar.add(jComboBoxUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 50, -1));
-
-        jComboBoxMedida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ampolla/8Horas ", "Ampolla/6Horas  ", "Ampolla/12Horas", "Ampolla/Día        ", "Tableta/6Horas", "Tableta/8Horas", "Tableta/12Horas ", "Tableta/Día        " }));
-        jComboBoxMedida.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxMedidaActionPerformed(evt);
-            }
-        });
-        jPanelRecetar.add(jComboBoxMedida, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 160, -1));
-
-        jTextAreaObs.setColumns(20);
-        jTextAreaObs.setRows(5);
-        jScrollPane2.setViewportView(jTextAreaObs);
-
-        jPanelRecetar.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 230, -1));
-
-        jLabel1.setText("Obeservaciones");
-        jPanelRecetar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, 30));
-
-        jButtonRuta.setText("Ruta");
-        jButtonRuta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRutaActionPerformed(evt);
-            }
-        });
-        jPanelRecetar.add(jButtonRuta, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, -1, -1));
-
-        jTextFieldRuta.setText("Ubicación");
-        jTextFieldRuta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldRutaActionPerformed(evt);
-            }
-        });
-        jPanelRecetar.add(jTextFieldRuta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 220, -1));
-
-        jButtonGuardar.setBackground(new java.awt.Color(116, 165, 170));
-        jButtonGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/savecita_.png"))); // NOI18N
-        jButtonGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGuardarActionPerformed(evt);
-            }
-        });
-        jPanelRecetar.add(jButtonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 450, -1, -1));
-
-        general_panel.add(jPanelRecetar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 660, 560));
+        jPanelRegistrar.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 110, 100));
 
         back_button1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/back_ .png"))); // NOI18N
         back_button1.setBorderPainted(false);
@@ -315,146 +176,17 @@ public class Medicamentos extends javax.swing.JFrame {
                 back_button1MousePressed(evt);
             }
         });
-        general_panel.add(back_button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
+        jPanelRegistrar.add(back_button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, -1));
+
+        general_panel.add(jPanelRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 610, 500));
 
         getContentPane().add(general_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldIdActionPerformed
-
-    private void jComboBoxMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMedActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxMedActionPerformed
-
-    private void jComboBoxUnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxUnidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxUnidadActionPerformed
-
-    private void jComboBoxMedidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMedidaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxMedidaActionPerformed
-
-    private void jButtonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel model = (DefaultTableModel) jTableFormula.getModel();
-        
-        int row = -1;//index of row or -1 if not found
-        System.out.println("row Ini" + row);
-        
-//search for the row based on the ID in the first column
-               
-         model.addRow(new Object [] {jComboBoxMed.getSelectedItem(),  String.valueOf(jComboBoxUnidad.getSelectedItem()) +" "+ String.valueOf(jComboBoxMedida.getSelectedItem()), jTextAreaObs.getText() } );
-        
-         
-         if(model.getRowCount() > 1)
-         { 
-            for(int i=0;i<model.getRowCount()-1;++i)
-               if(model.getValueAt(i, 0).toString().equals(model.getValueAt(model.getRowCount()-1 ,0).toString() ))
-                       if( model.getValueAt(i,1).toString().equals(model.getValueAt(model.getRowCount()-1,1).toString() ) )
-                        {
-                            row = i;
-                            model.removeRow(row);//remove row 
-                            break;
-                        }
-         }
-       /* if(row != -1)
-        {
-            System.out.println("rem");
-            model.removeRow(row);//remove row   
-        }
-          System.out.println("row 2 " + row);*/
-    }//GEN-LAST:event_jButtonAgregarActionPerformed
-
-    private void jButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarActionPerformed
-        // TODO add your handling code here:
-
-        formula_control.insertarFormula(vista_control.getIdActual());
-        
-        
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        Date date = new Date();
-        String fecha =  "\nFecha: "+dateFormat.format(date);
-        String ruta = jTextFieldRuta.getText();
-        
-        String intro = "\n\n\nClinica X ~ Fórmula Médica \n \n \n \n ";
-        String headers = "Id Paciente: " +  jTextFieldId.getText() ;
-        String codFormula ="\n"; 
-        String medico = "\n" + vista_control.getUsuario();
-        
-        String contenido = intro + headers + fecha+  medico + codFormula+  "\n\n\n\n Fórmula: \n\n";
-        
-        
-       
-        try{
-            FileOutputStream archivo = new FileOutputStream(ruta +".pdf");
-            Document doc = new Document ();
-            PdfWriter.getInstance(doc,archivo);
-            doc.open();
-            PdfPTable table = new PdfPTable(3); 
-            table.addCell("Medicamento");
-            table.addCell("Dosis");
-            table.addCell("Observaciones");
-            for (int i = 0 ; i < jTableFormula.getRowCount() ; i++)
-            {
-                table.addCell( jTableFormula.getValueAt(i,0).toString()) ;
-                table.addCell( jTableFormula.getValueAt(i,1).toString());
-                table.addCell( jTableFormula.getValueAt(i,2).toString());
-
-
-            }           
-              // Indicamos cuantas columnas ocupa la celda
-            doc.add(new Paragraph (contenido) );
-            doc.add(table);
-        
-            
-            doc.close(); 
-        
-        }
-        catch (Exception e)
-        {
-            System.err.println("Error: " + e );
-        
-        }
-        System.out.println(contenido);
-        
-        
-        
-    }//GEN-LAST:event_jButtonGuardarActionPerformed
-
-    private void jButtonRutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRutaActionPerformed
-        // TODO add your handling code here:
-        JFileChooser  dlg = new JFileChooser(); 
-        int option = dlg.showSaveDialog(this); 
-        if(option == JFileChooser.APPROVE_OPTION)
-        {
-            File f = dlg.getSelectedFile() ; 
-            jTextFieldRuta.setText(f.toString() );
-            
-        } 
-    }//GEN-LAST:event_jButtonRutaActionPerformed
-
-    private void jTextFieldRutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldRutaActionPerformed
-        // TODO add your handling code here:
-       jTextFieldRuta.setText("");
-       jTextFieldRuta.setEditable(false);
-       
-    }//GEN-LAST:event_jTextFieldRutaActionPerformed
-
-    private void jButtonRecetarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRecetarActionPerformed
-        // TODO add your handling code here:
-        jPanelRecetar.setVisible(true);
-        jPanelRegistrar.setVisible(false);
-        
-    }//GEN-LAST:event_jButtonRecetarActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        jPanelRecetar.setVisible(false);
-        jPanelRegistrar.setVisible(true);
+
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -484,20 +216,14 @@ public class Medicamentos extends javax.swing.JFrame {
     private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTableQuery.getModel();
-        
-        model.addRow(new Object[]{1, 2,3});
-        
+               
         if (!jTextFieldNombre.getText().isEmpty())
         {
             Vector <Medicamento> meds = new Vector <Medicamento> (); 
             meds = medicamento_control.buscarxNombre(jTextFieldNombre.getText());
-            System.out.println("size: "+ meds.size());
-            System.out.println(meds.get(9).getNomMedicamento());
             for (int i= 0; i < meds.size() ; i++)
             {
-                model.addRow(new Object[]{meds.get(i).getCodigoMedicamento(), meds.get(i).getNomMedicamento() , meds.get(i).getDescrip_medicamento(), meds.get(i).getCosto_medicamento()});
-                
-                
+                model.addRow(new Object[]{meds.get(i).getCodigoMedicamento(), meds.get(i).getNomMedicamento() , meds.get(i).getDescrip_medicamento(), meds.get(i).getCosto_medicamento()});   
             }
         }
             
@@ -513,35 +239,15 @@ public class Medicamentos extends javax.swing.JFrame {
     private javax.swing.JPanel general_panel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButtonAgregar;
-    private javax.swing.JButton jButtonGuardar;
-    private javax.swing.JButton jButtonRecetar;
-    private javax.swing.JButton jButtonRuta;
     private javax.swing.JButton jButtonSearch;
-    private javax.swing.JComboBox<String> jComboBoxMed;
-    private javax.swing.JComboBox<String> jComboBoxMedida;
-    private javax.swing.JComboBox<String> jComboBoxUnidad;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabelDosis;
-    private javax.swing.JLabel jLabelId;
-    private javax.swing.JLabel jLabelMed;
-    private javax.swing.JPanel jPanelRecetar;
     private javax.swing.JPanel jPanelRegistrar;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable jTableFormula;
     private javax.swing.JTable jTableQuery;
-    private javax.swing.JTextArea jTextAreaObs;
     private javax.swing.JTextField jTextFieldCosto;
     private javax.swing.JTextField jTextFieldDescr;
-    private javax.swing.JTextField jTextFieldId;
     private javax.swing.JTextField jTextFieldNombre;
-    private javax.swing.JTextField jTextFieldRuta;
-    private java.awt.ScrollPane scrollPane1;
     // End of variables declaration//GEN-END:variables
 }

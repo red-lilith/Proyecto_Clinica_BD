@@ -48,6 +48,8 @@ public class VerRegistro extends javax.swing.JFrame {
         causaConsulta_control = new CausaConsulta_Control();
         medicamento_control = new Medicamento_Control();
         
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        
         mipaciente = 0;
         mihistoria = 0;
         miregistro = 0;

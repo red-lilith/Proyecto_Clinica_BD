@@ -45,14 +45,13 @@ public class MedicamentoDAO {
     public Vector<Medicamento> buscarxNombre(String nombre){
         Vector <Medicamento> meds = new Vector <Medicamento>();
         String sql_select;
-        sql_select="SELECT cod_medicam,nom_medicam, descrip_medicam, costo_medicam FROM medicamento WHERE nom_medicam ILIKE '%"+nombre+"%'";
+        sql_select="SELECT cod_medicam, nom_medicam, descrip_medicam, costo_medicam FROM medicamento WHERE nom_medicam ILIKE '%"+nombre+"%'";
          try{
             Connection conn = fachadaBD.getConnetion();
             Statement sentencia = conn.createStatement();
             ResultSet tabla = sentencia.executeQuery(sql_select);
             
             while(tabla.next()){
-                System.out.println("next");
                 Medicamento med = new Medicamento(); 
                 med.setCodigoMedicamento(tabla.getInt(1));
                 med.setNomMedicamento( tabla.getString(2) );
@@ -60,7 +59,6 @@ public class MedicamentoDAO {
                 med.setCostoMedicamento(tabla.getInt(4));
                 meds.addElement(med);
             }         
-            System.out.println("size: "+ meds.size());
             return meds;
          }
          catch(SQLException e){ System.out.println(e); }

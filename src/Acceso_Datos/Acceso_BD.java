@@ -8,9 +8,9 @@ public class Acceso_BD {
     Statement instruccion;
     ResultSet tabla;
     public Acceso_BD() {
-        url = "jdbc:postgresql://localhost:5432/Clinica";
-        usuario = "daniel";
-        password = "123";
+        url = "jdbc:postgresql://localhost:5432/clinica";
+        usuario = "diana";
+        password = "mefistofeles";
         conectar();
     }
 

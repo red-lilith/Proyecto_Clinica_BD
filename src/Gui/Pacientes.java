@@ -111,29 +111,6 @@ public class Pacientes extends javax.swing.JFrame {
     private void initComponents() {
 
         asigCama_group = new javax.swing.ButtonGroup();
-        facturacion_panel = new javax.swing.JPanel();
-        horiz_separator1 = new javax.swing.JSeparator();
-        vert_separator1 = new javax.swing.JSeparator();
-        agenda_label = new javax.swing.JLabel();
-        agendamensual_label = new javax.swing.JLabel();
-        toolbar_users_areas2 = new javax.swing.JToolBar();
-        filter_button2 = new javax.swing.JButton();
-        clear_button1 = new javax.swing.JButton();
-        search_button3 = new javax.swing.JButton();
-        numCitas_text1 = new javax.swing.JLabel();
-        year = new com.toedter.calendar.JYearChooser();
-        agenda_label1 = new javax.swing.JLabel();
-        agenda_label2 = new javax.swing.JLabel();
-        costo1 = new javax.swing.JLabel();
-        agenda_label4 = new javax.swing.JLabel();
-        agenda_label5 = new javax.swing.JLabel();
-        costo2 = new javax.swing.JLabel();
-        back_button2 = new javax.swing.JButton();
-        opciones_panel = new javax.swing.JPanel();
-        opciones_agendar_toolbar = new javax.swing.JToolBar();
-        pacientes_button = new javax.swing.JButton();
-        histoClinica_button = new javax.swing.JButton();
-        facturacion_button = new javax.swing.JButton();
         historia_tabbed = new javax.swing.JTabbedPane();
         historia_panel = new javax.swing.JPanel();
         num_label = new javax.swing.JLabel();
@@ -200,6 +177,29 @@ public class Pacientes extends javax.swing.JFrame {
         descripCausa_scroll1 = new javax.swing.JScrollPane();
         dosis_area = new javax.swing.JTextArea();
         descripCausa_label1 = new javax.swing.JLabel();
+        facturacion_panel = new javax.swing.JPanel();
+        horiz_separator1 = new javax.swing.JSeparator();
+        vert_separator1 = new javax.swing.JSeparator();
+        agenda_label = new javax.swing.JLabel();
+        agendamensual_label = new javax.swing.JLabel();
+        toolbar_users_areas2 = new javax.swing.JToolBar();
+        filter_button2 = new javax.swing.JButton();
+        clear_button1 = new javax.swing.JButton();
+        search_button3 = new javax.swing.JButton();
+        numCitas_text1 = new javax.swing.JLabel();
+        year = new com.toedter.calendar.JYearChooser();
+        agenda_label1 = new javax.swing.JLabel();
+        agenda_label2 = new javax.swing.JLabel();
+        costo1 = new javax.swing.JLabel();
+        agenda_label4 = new javax.swing.JLabel();
+        agenda_label5 = new javax.swing.JLabel();
+        costo2 = new javax.swing.JLabel();
+        back_button2 = new javax.swing.JButton();
+        opciones_panel = new javax.swing.JPanel();
+        opciones_agendar_toolbar = new javax.swing.JToolBar();
+        pacientes_button = new javax.swing.JButton();
+        histoClinica_button = new javax.swing.JButton();
+        facturacion_button = new javax.swing.JButton();
         pacientes_panel = new javax.swing.JPanel();
         personal_info_label4 = new javax.swing.JLabel();
         id_label = new javax.swing.JLabel();
@@ -230,318 +230,6 @@ public class Pacientes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        facturacion_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        vert_separator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
-        agenda_label.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
-        agenda_label.setText("Costos de Pacientes:");
-
-        agendamensual_label.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
-        agendamensual_label.setText("Facturacion Anual");
-
-        toolbar_users_areas2.setBackground(new java.awt.Color(132, 182, 188));
-        toolbar_users_areas2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        toolbar_users_areas2.setRollover(true);
-        toolbar_users_areas2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                toolbar_users_areas2MousePressed(evt);
-            }
-        });
-
-        filter_button2.setFont(new java.awt.Font("Bitstream Charter", 1, 18)); // NOI18N
-        filter_button2.setForeground(new java.awt.Color(99, 110, 111));
-        filter_button2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/filter_.png"))); // NOI18N
-        filter_button2.setToolTipText("");
-        filter_button2.setAlignmentY(0.1F);
-        filter_button2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        filter_button2.setFocusable(false);
-        filter_button2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        filter_button2.setIconTextGap(5);
-        filter_button2.setMaximumSize(new java.awt.Dimension(129, 129));
-        filter_button2.setMinimumSize(new java.awt.Dimension(129, 129));
-        filter_button2.setName("doctor_button"); // NOI18N
-        filter_button2.setPreferredSize(new java.awt.Dimension(53, 53));
-        filter_button2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        filter_button2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                filter_button2MousePressed(evt);
-            }
-        });
-        toolbar_users_areas2.add(filter_button2);
-
-        clear_button1.setFont(new java.awt.Font("Bitstream Charter", 1, 18)); // NOI18N
-        clear_button1.setForeground(new java.awt.Color(99, 110, 111));
-        clear_button1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/clear_.png"))); // NOI18N
-        clear_button1.setToolTipText("");
-        clear_button1.setAlignmentY(0.1F);
-        clear_button1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        clear_button1.setFocusable(false);
-        clear_button1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        clear_button1.setIconTextGap(5);
-        clear_button1.setMaximumSize(new java.awt.Dimension(129, 129));
-        clear_button1.setMinimumSize(new java.awt.Dimension(129, 129));
-        clear_button1.setName("doctor_button"); // NOI18N
-        clear_button1.setPreferredSize(new java.awt.Dimension(53, 53));
-        clear_button1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        clear_button1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                clear_button1MousePressed(evt);
-            }
-        });
-        toolbar_users_areas2.add(clear_button1);
-
-        search_button3.setFont(new java.awt.Font("Bitstream Charter", 1, 18)); // NOI18N
-        search_button3.setForeground(new java.awt.Color(99, 110, 111));
-        search_button3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/confirm_ .png"))); // NOI18N
-        search_button3.setToolTipText("");
-        search_button3.setAlignmentY(0.1F);
-        search_button3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        search_button3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        search_button3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        search_button3.setIconTextGap(5);
-        search_button3.setMaximumSize(new java.awt.Dimension(129, 129));
-        search_button3.setMinimumSize(new java.awt.Dimension(129, 129));
-        search_button3.setName("doctor_button"); // NOI18N
-        search_button3.setPreferredSize(new java.awt.Dimension(53, 53));
-        search_button3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        search_button3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                search_button3MousePressed(evt);
-            }
-        });
-
-        numCitas_text1.setFont(new java.awt.Font("Lucida Bright", 0, 15)); // NOI18N
-        numCitas_text1.setText("Seleccione un Año");
-
-        agenda_label1.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
-        agenda_label1.setText("Promedio por medicamentos:");
-
-        agenda_label2.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
-        agenda_label2.setText("Promedio por consultas:");
-
-        costo1.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
-        costo1.setForeground(new java.awt.Color(0, 204, 0));
-        costo1.setText("0");
-
-        agenda_label4.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
-        agenda_label4.setForeground(new java.awt.Color(0, 204, 0));
-        agenda_label4.setText("$");
-
-        agenda_label5.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
-        agenda_label5.setForeground(new java.awt.Color(0, 204, 0));
-        agenda_label5.setText("$");
-
-        costo2.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
-        costo2.setForeground(new java.awt.Color(0, 204, 0));
-        costo2.setText("0");
-
-        back_button2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/back_ .png"))); // NOI18N
-        back_button2.setBorderPainted(false);
-        back_button2.setContentAreaFilled(false);
-        back_button2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        back_button2.setFocusable(false);
-        back_button2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        back_button2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/backpressed_ .png"))); // NOI18N
-        back_button2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/backselected_ .png"))); // NOI18N
-        back_button2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        back_button2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                back_button2MousePressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout facturacion_panelLayout = new javax.swing.GroupLayout(facturacion_panel);
-        facturacion_panel.setLayout(facturacion_panelLayout);
-        facturacion_panelLayout.setHorizontalGroup(
-            facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(facturacion_panelLayout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
-                .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(facturacion_panelLayout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(agenda_label))
-                    .addGroup(facturacion_panelLayout.createSequentialGroup()
-                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(agenda_label2)
-                            .addComponent(agenda_label1))
-                        .addGap(28, 28, 28)
-                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(facturacion_panelLayout.createSequentialGroup()
-                                .addComponent(agenda_label4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(costo1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(facturacion_panelLayout.createSequentialGroup()
-                                .addComponent(agenda_label5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(costo2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(28, 28, 28)
-                .addComponent(vert_separator1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(facturacion_panelLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(numCitas_text1))
-                    .addComponent(agendamensual_label)
-                    .addGroup(facturacion_panelLayout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(search_button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(facturacion_panelLayout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(toolbar_users_areas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(111, 111, 111))
-            .addComponent(horiz_separator1, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, facturacion_panelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(back_button2)
-                .addGap(60, 60, 60))
-        );
-        facturacion_panelLayout.setVerticalGroup(
-            facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, facturacion_panelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(back_button2)
-                .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(facturacion_panelLayout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(horiz_separator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(facturacion_panelLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(vert_separator1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(facturacion_panelLayout.createSequentialGroup()
-                                .addGap(83, 83, 83)
-                                .addComponent(agendamensual_label)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(numCitas_text1)
-                                .addGap(29, 29, 29)
-                                .addComponent(year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(search_button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)
-                                .addComponent(toolbar_users_areas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(facturacion_panelLayout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(agenda_label)
-                        .addGap(65, 65, 65)
-                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(agenda_label2)
-                            .addComponent(costo1)
-                            .addComponent(agenda_label4))
-                        .addGap(43, 43, 43)
-                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(agenda_label1)
-                            .addComponent(costo2)
-                            .addComponent(agenda_label5))))
-                .addContainerGap(51, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(facturacion_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 1040, 600));
-
-        opciones_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        opciones_panel.setMaximumSize(new java.awt.Dimension(160, 660));
-        opciones_panel.setPreferredSize(new java.awt.Dimension(160, 660));
-
-        opciones_agendar_toolbar.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        opciones_agendar_toolbar.setRollover(true);
-        opciones_agendar_toolbar.setPreferredSize(new java.awt.Dimension(162, 552));
-
-        pacientes_button.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
-        pacientes_button.setForeground(new java.awt.Color(99, 110, 111));
-        pacientes_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/paciente_.png"))); // NOI18N
-        pacientes_button.setText("Gestionar Paciente");
-        pacientes_button.setToolTipText("");
-        pacientes_button.setAlignmentY(0.1F);
-        pacientes_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        pacientes_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pacientes_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        pacientes_button.setIconTextGap(-10);
-        pacientes_button.setMaximumSize(new java.awt.Dimension(159, 181));
-        pacientes_button.setMinimumSize(new java.awt.Dimension(159, 181));
-        pacientes_button.setPreferredSize(new java.awt.Dimension(220, 180));
-        pacientes_button.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        pacientes_button.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        pacientes_button.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                pacientes_buttonMousePressed(evt);
-            }
-        });
-        pacientes_button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pacientes_buttonActionPerformed(evt);
-            }
-        });
-        opciones_agendar_toolbar.add(pacientes_button);
-
-        histoClinica_button.setFont(new java.awt.Font("Lucida Bright", 0, 18)); // NOI18N
-        histoClinica_button.setForeground(new java.awt.Color(99, 110, 111));
-        histoClinica_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/clinicalhistory_.png"))); // NOI18N
-        histoClinica_button.setText("Historia Clínica");
-        histoClinica_button.setToolTipText("");
-        histoClinica_button.setAlignmentY(0.1F);
-        histoClinica_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        histoClinica_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        histoClinica_button.setFocusable(false);
-        histoClinica_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        histoClinica_button.setIconTextGap(0);
-        histoClinica_button.setPreferredSize(new java.awt.Dimension(220, 180));
-        histoClinica_button.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        histoClinica_button.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        histoClinica_button.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                histoClinica_buttonMousePressed(evt);
-            }
-        });
-        histoClinica_button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                histoClinica_buttonActionPerformed(evt);
-            }
-        });
-        opciones_agendar_toolbar.add(histoClinica_button);
-
-        facturacion_button.setFont(new java.awt.Font("Lucida Bright", 0, 18)); // NOI18N
-        facturacion_button.setForeground(new java.awt.Color(99, 110, 111));
-        facturacion_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/factura_.png"))); // NOI18N
-        facturacion_button.setText("Facturación");
-        facturacion_button.setToolTipText("");
-        facturacion_button.setAlignmentY(0.1F);
-        facturacion_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        facturacion_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        facturacion_button.setFocusable(false);
-        facturacion_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        facturacion_button.setIconTextGap(-5);
-        facturacion_button.setMaximumSize(new java.awt.Dimension(159, 181));
-        facturacion_button.setMinimumSize(new java.awt.Dimension(159, 181));
-        facturacion_button.setPreferredSize(new java.awt.Dimension(220, 180));
-        facturacion_button.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        facturacion_button.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        facturacion_button.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                facturacion_buttonMousePressed(evt);
-            }
-        });
-        opciones_agendar_toolbar.add(facturacion_button);
-
-        javax.swing.GroupLayout opciones_panelLayout = new javax.swing.GroupLayout(opciones_panel);
-        opciones_panel.setLayout(opciones_panelLayout);
-        opciones_panelLayout.setHorizontalGroup(
-            opciones_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(opciones_panelLayout.createSequentialGroup()
-                .addComponent(opciones_agendar_toolbar, javax.swing.GroupLayout.PREFERRED_SIZE, 161, Short.MAX_VALUE)
-                .addGap(106, 106, 106))
-        );
-        opciones_panelLayout.setVerticalGroup(
-            opciones_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(opciones_panelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(opciones_agendar_toolbar, javax.swing.GroupLayout.PREFERRED_SIZE, 555, Short.MAX_VALUE)
-                .addGap(41, 41, 41))
-        );
-
-        getContentPane().add(opciones_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 600));
 
         historia_tabbed.setBackground(new java.awt.Color(242, 241, 240));
         historia_tabbed.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -1260,6 +948,316 @@ public class Pacientes extends javax.swing.JFrame {
         historia_tabbed.addTab("Agregar Registros", agregarRegistro_panel);
 
         getContentPane().add(historia_tabbed, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 990, 600));
+
+        facturacion_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        vert_separator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        agenda_label.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        agenda_label.setText("Costos de Pacientes:");
+
+        agendamensual_label.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        agendamensual_label.setText("Facturacion Anual");
+
+        toolbar_users_areas2.setBackground(new java.awt.Color(132, 182, 188));
+        toolbar_users_areas2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        toolbar_users_areas2.setRollover(true);
+        toolbar_users_areas2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                toolbar_users_areas2MousePressed(evt);
+            }
+        });
+
+        filter_button2.setFont(new java.awt.Font("Bitstream Charter", 1, 18)); // NOI18N
+        filter_button2.setForeground(new java.awt.Color(99, 110, 111));
+        filter_button2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/filter_.png"))); // NOI18N
+        filter_button2.setToolTipText("");
+        filter_button2.setAlignmentY(0.1F);
+        filter_button2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        filter_button2.setFocusable(false);
+        filter_button2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        filter_button2.setIconTextGap(5);
+        filter_button2.setMaximumSize(new java.awt.Dimension(129, 129));
+        filter_button2.setMinimumSize(new java.awt.Dimension(129, 129));
+        filter_button2.setName("doctor_button"); // NOI18N
+        filter_button2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        filter_button2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                filter_button2MousePressed(evt);
+            }
+        });
+        toolbar_users_areas2.add(filter_button2);
+
+        clear_button1.setFont(new java.awt.Font("Bitstream Charter", 1, 18)); // NOI18N
+        clear_button1.setForeground(new java.awt.Color(99, 110, 111));
+        clear_button1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/clear_.png"))); // NOI18N
+        clear_button1.setToolTipText("");
+        clear_button1.setAlignmentY(0.1F);
+        clear_button1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        clear_button1.setFocusable(false);
+        clear_button1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        clear_button1.setIconTextGap(5);
+        clear_button1.setMaximumSize(new java.awt.Dimension(129, 129));
+        clear_button1.setMinimumSize(new java.awt.Dimension(129, 129));
+        clear_button1.setName("doctor_button"); // NOI18N
+        clear_button1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        clear_button1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                clear_button1MousePressed(evt);
+            }
+        });
+        toolbar_users_areas2.add(clear_button1);
+
+        search_button3.setFont(new java.awt.Font("Bitstream Charter", 1, 18)); // NOI18N
+        search_button3.setForeground(new java.awt.Color(99, 110, 111));
+        search_button3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/confirm_ .png"))); // NOI18N
+        search_button3.setToolTipText("");
+        search_button3.setAlignmentY(0.1F);
+        search_button3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        search_button3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        search_button3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        search_button3.setIconTextGap(5);
+        search_button3.setMaximumSize(new java.awt.Dimension(129, 129));
+        search_button3.setMinimumSize(new java.awt.Dimension(129, 129));
+        search_button3.setName("doctor_button"); // NOI18N
+        search_button3.setPreferredSize(new java.awt.Dimension(53, 53));
+        search_button3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        search_button3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                search_button3MousePressed(evt);
+            }
+        });
+
+        numCitas_text1.setFont(new java.awt.Font("Lucida Bright", 0, 15)); // NOI18N
+        numCitas_text1.setText("Seleccione un Año");
+
+        agenda_label1.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        agenda_label1.setText("Promedio por medicamentos:");
+
+        agenda_label2.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        agenda_label2.setText("Promedio por consultas:");
+
+        costo1.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
+        costo1.setForeground(new java.awt.Color(0, 204, 0));
+        costo1.setText("0");
+
+        agenda_label4.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
+        agenda_label4.setForeground(new java.awt.Color(0, 204, 0));
+        agenda_label4.setText("$");
+
+        agenda_label5.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
+        agenda_label5.setForeground(new java.awt.Color(0, 204, 0));
+        agenda_label5.setText("$");
+
+        costo2.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
+        costo2.setForeground(new java.awt.Color(0, 204, 0));
+        costo2.setText("0");
+
+        back_button2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/back_ .png"))); // NOI18N
+        back_button2.setBorderPainted(false);
+        back_button2.setContentAreaFilled(false);
+        back_button2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back_button2.setFocusable(false);
+        back_button2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        back_button2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/backpressed_ .png"))); // NOI18N
+        back_button2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/backselected_ .png"))); // NOI18N
+        back_button2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        back_button2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                back_button2MousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout facturacion_panelLayout = new javax.swing.GroupLayout(facturacion_panel);
+        facturacion_panel.setLayout(facturacion_panelLayout);
+        facturacion_panelLayout.setHorizontalGroup(
+            facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(facturacion_panelLayout.createSequentialGroup()
+                .addContainerGap(47, Short.MAX_VALUE)
+                .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(facturacion_panelLayout.createSequentialGroup()
+                        .addGap(118, 118, 118)
+                        .addComponent(agenda_label))
+                    .addGroup(facturacion_panelLayout.createSequentialGroup()
+                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(agenda_label2)
+                            .addComponent(agenda_label1))
+                        .addGap(28, 28, 28)
+                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(facturacion_panelLayout.createSequentialGroup()
+                                .addComponent(agenda_label4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(costo1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(facturacion_panelLayout.createSequentialGroup()
+                                .addComponent(agenda_label5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(costo2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(28, 28, 28)
+                .addComponent(vert_separator1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(facturacion_panelLayout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(numCitas_text1))
+                    .addComponent(agendamensual_label)
+                    .addGroup(facturacion_panelLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(search_button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(facturacion_panelLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(toolbar_users_areas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(111, 111, 111))
+            .addComponent(horiz_separator1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, facturacion_panelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(back_button2)
+                .addGap(60, 60, 60))
+        );
+        facturacion_panelLayout.setVerticalGroup(
+            facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, facturacion_panelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(back_button2)
+                .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(facturacion_panelLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(horiz_separator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(facturacion_panelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(vert_separator1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(facturacion_panelLayout.createSequentialGroup()
+                                .addGap(83, 83, 83)
+                                .addComponent(agendamensual_label)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(numCitas_text1)
+                                .addGap(29, 29, 29)
+                                .addComponent(year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(search_button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)
+                                .addComponent(toolbar_users_areas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(facturacion_panelLayout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(agenda_label)
+                        .addGap(65, 65, 65)
+                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(agenda_label2)
+                            .addComponent(costo1)
+                            .addComponent(agenda_label4))
+                        .addGap(43, 43, 43)
+                        .addGroup(facturacion_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(agenda_label1)
+                            .addComponent(costo2)
+                            .addComponent(agenda_label5))))
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(facturacion_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 1040, 600));
+
+        opciones_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        opciones_panel.setMaximumSize(new java.awt.Dimension(160, 660));
+        opciones_panel.setPreferredSize(new java.awt.Dimension(160, 660));
+
+        opciones_agendar_toolbar.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        opciones_agendar_toolbar.setRollover(true);
+        opciones_agendar_toolbar.setPreferredSize(new java.awt.Dimension(162, 552));
+
+        pacientes_button.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
+        pacientes_button.setForeground(new java.awt.Color(99, 110, 111));
+        pacientes_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/paciente_.png"))); // NOI18N
+        pacientes_button.setText("Gestionar Paciente");
+        pacientes_button.setToolTipText("");
+        pacientes_button.setAlignmentY(0.1F);
+        pacientes_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pacientes_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pacientes_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        pacientes_button.setIconTextGap(-10);
+        pacientes_button.setMaximumSize(new java.awt.Dimension(159, 181));
+        pacientes_button.setMinimumSize(new java.awt.Dimension(159, 181));
+        pacientes_button.setPreferredSize(new java.awt.Dimension(220, 180));
+        pacientes_button.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        pacientes_button.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pacientes_button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pacientes_buttonMousePressed(evt);
+            }
+        });
+        pacientes_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pacientes_buttonActionPerformed(evt);
+            }
+        });
+        opciones_agendar_toolbar.add(pacientes_button);
+
+        histoClinica_button.setFont(new java.awt.Font("Lucida Bright", 0, 18)); // NOI18N
+        histoClinica_button.setForeground(new java.awt.Color(99, 110, 111));
+        histoClinica_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/clinicalhistory_.png"))); // NOI18N
+        histoClinica_button.setText("Historia Clínica");
+        histoClinica_button.setToolTipText("");
+        histoClinica_button.setAlignmentY(0.1F);
+        histoClinica_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        histoClinica_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        histoClinica_button.setFocusable(false);
+        histoClinica_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        histoClinica_button.setIconTextGap(0);
+        histoClinica_button.setPreferredSize(new java.awt.Dimension(220, 180));
+        histoClinica_button.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        histoClinica_button.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        histoClinica_button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                histoClinica_buttonMousePressed(evt);
+            }
+        });
+        histoClinica_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                histoClinica_buttonActionPerformed(evt);
+            }
+        });
+        opciones_agendar_toolbar.add(histoClinica_button);
+
+        facturacion_button.setFont(new java.awt.Font("Lucida Bright", 0, 18)); // NOI18N
+        facturacion_button.setForeground(new java.awt.Color(99, 110, 111));
+        facturacion_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/factura_.png"))); // NOI18N
+        facturacion_button.setText("Facturación");
+        facturacion_button.setToolTipText("");
+        facturacion_button.setAlignmentY(0.1F);
+        facturacion_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        facturacion_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        facturacion_button.setFocusable(false);
+        facturacion_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        facturacion_button.setIconTextGap(-5);
+        facturacion_button.setMaximumSize(new java.awt.Dimension(159, 181));
+        facturacion_button.setMinimumSize(new java.awt.Dimension(159, 181));
+        facturacion_button.setPreferredSize(new java.awt.Dimension(220, 180));
+        facturacion_button.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        facturacion_button.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        facturacion_button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                facturacion_buttonMousePressed(evt);
+            }
+        });
+        opciones_agendar_toolbar.add(facturacion_button);
+
+        javax.swing.GroupLayout opciones_panelLayout = new javax.swing.GroupLayout(opciones_panel);
+        opciones_panel.setLayout(opciones_panelLayout);
+        opciones_panelLayout.setHorizontalGroup(
+            opciones_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(opciones_panelLayout.createSequentialGroup()
+                .addComponent(opciones_agendar_toolbar, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                .addGap(106, 106, 106))
+        );
+        opciones_panelLayout.setVerticalGroup(
+            opciones_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(opciones_panelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(opciones_agendar_toolbar, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
+                .addGap(41, 41, 41))
+        );
+
+        getContentPane().add(opciones_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 600));
 
         pacientes_panel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
