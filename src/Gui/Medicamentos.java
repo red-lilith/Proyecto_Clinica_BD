@@ -215,7 +215,7 @@ public class Medicamentos extends javax.swing.JFrame {
         
         int rows = model.getRowCount();
         for (int i = rows - 1; i >= 0; i--) {
-            model.removeRow(i);
+            model.removeRow(0);
         }      
         if (!jTextFieldNombre.getText().isEmpty())
         {
