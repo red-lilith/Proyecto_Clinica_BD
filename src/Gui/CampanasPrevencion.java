@@ -97,6 +97,7 @@ public class CampanasPrevencion extends javax.swing.JFrame {
         clear_button = new javax.swing.JButton();
         registros_label = new javax.swing.JLabel();
         todo_button = new javax.swing.JButton();
+        back_button5 = new javax.swing.JButton();
         asistentes_panel = new javax.swing.JPanel();
         registroAsis_label = new javax.swing.JLabel();
         idPaci_label = new javax.swing.JLabel();
@@ -295,6 +296,21 @@ public class CampanasPrevencion extends javax.swing.JFrame {
             }
         });
 
+        back_button5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/back_ .png"))); // NOI18N
+        back_button5.setBorderPainted(false);
+        back_button5.setContentAreaFilled(false);
+        back_button5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back_button5.setFocusable(false);
+        back_button5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        back_button5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/backpressed_ .png"))); // NOI18N
+        back_button5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Gui/imgs/backselected_ .png"))); // NOI18N
+        back_button5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        back_button5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                back_button5MousePressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout campana_labelLayout = new javax.swing.GroupLayout(campana_label);
         campana_label.setLayout(campana_labelLayout);
         campana_labelLayout.setHorizontalGroup(
@@ -335,6 +351,8 @@ public class CampanasPrevencion extends javax.swing.JFrame {
                                             .addComponent(save_button)
                                             .addGap(70, 70, 70)))))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(back_button5)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(back_button3))
                         .addGroup(campana_labelLayout.createSequentialGroup()
                             .addContainerGap()
@@ -355,13 +373,16 @@ public class CampanasPrevencion extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(campana_labelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(campana_labelLayout.createSequentialGroup()
-                        .addComponent(registrocam_label)
-                        .addGap(16, 16, 16)
-                        .addGroup(campana_labelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cod_label)
-                            .addComponent(cod_field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nom_label)
-                            .addComponent(nom_field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(campana_labelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(campana_labelLayout.createSequentialGroup()
+                                .addComponent(registrocam_label)
+                                .addGap(16, 16, 16)
+                                .addGroup(campana_labelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cod_label)
+                                    .addComponent(cod_field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nom_label)
+                                    .addComponent(nom_field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(back_button5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(campana_labelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(medicoCampana_box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -897,6 +918,11 @@ public class CampanasPrevencion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_todo_buttonActionPerformed
 
+    private void back_button5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_button5MousePressed
+        setVisible(false);
+        vista_control.mostrarVentana("general");
+    }//GEN-LAST:event_back_button5MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -906,6 +932,7 @@ public class CampanasPrevencion extends javax.swing.JFrame {
     private javax.swing.JToolBar asistentes_toolbar;
     private javax.swing.JButton back_button3;
     private javax.swing.JButton back_button4;
+    private javax.swing.JButton back_button5;
     private javax.swing.JButton buscarId_button;
     private javax.swing.JLabel campa_label;
     private javax.swing.JComboBox<String> campana_box;

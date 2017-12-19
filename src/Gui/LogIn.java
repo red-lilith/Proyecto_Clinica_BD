@@ -22,7 +22,7 @@ public class LogIn extends javax.swing.JFrame {
         super("Clínica X || Iniciar Sesión");
         initComponents();
 	setLocationRelativeTo(null);
-	setSize(280,450);
+	setSize(280,455);
 	setResizable(false);	
 	setVisible(true);
         

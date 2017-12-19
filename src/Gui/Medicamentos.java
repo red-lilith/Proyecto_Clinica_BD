@@ -14,14 +14,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.table.DefaultTableModel;
-import com.itextpdf.text.Document; 
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import javax.swing.JFileChooser;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
+
 import java.util.Vector;
 import javax.swing.JOptionPane;
 
@@ -217,13 +213,9 @@ public class Medicamentos extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTableQuery.getModel();
         
-        if(model.getRowCount() != 0 )
-        {
-            int rows= model.getRowCount(); 
-            for(int i= 0; i <rows; i++) {
-                
-                model.removeRow(0);
-             }
+        int rows = model.getRowCount();
+        for (int i = rows - 1; i >= 0; i--) {
+            model.removeRow(i);
         }      
         if (!jTextFieldNombre.getText().isEmpty())
         {
