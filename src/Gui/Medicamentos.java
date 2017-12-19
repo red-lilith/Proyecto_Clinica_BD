@@ -216,7 +216,15 @@ public class Medicamentos extends javax.swing.JFrame {
     private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTableQuery.getModel();
-               
+        
+        if(model.getRowCount() != 0 )
+        {
+            int rows= model.getRowCount(); 
+            for(int i= 0; i <rows; i++) {
+                
+                model.removeRow(0);
+             }
+        }      
         if (!jTextFieldNombre.getText().isEmpty())
         {
             Vector <Medicamento> meds = new Vector <Medicamento> (); 
